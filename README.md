@@ -45,16 +45,21 @@ Nova Bank provides personal, medical, education and business loans across the US
 - Donut: Risk segmentation (Safe / Moderate / Risky).  
 - Heatmap: Employment × Home Ownership vs % Risky.  
 - Bar chart: Past Defaults impact (Y/N).
+  ![Borrower Risk Profile](https://github.com/Mayreeobi/Credit-Risk-Analysis/blob/main/_Risk%20Profile.png)
+
 
 ### 🔹 Page 2 — **Loan Performance** (What happened with current loans?)  
 - KPI tiles: Total Loans Issued, Default Rate, Total Default Exposure.  
 - Bar chart: % Default by Loan Purpose.  
 - Scatter: Loan-to-Income vs Default %.  
 - Map: Default rate across USA, UK, Canada.
+  ![Loan Performance](https://github.com/Mayreeobi/Credit-Risk-Analysis/blob/main/Loan%20Performance.png)
 
 ### 🔹 Page 3 — **Borrower Details** (Drill-down)  
 - Interactive table of borrower-level details.  
-- Filters for demographics, loan purpose, and grade.  
+- Filters for demographics, loan purpose, and grade.
+   ![Borrower Details](https://github.com/Mayreeobi/Credit-Risk-Analysis/blob/main/Details.png)
+
 
 ---
 
