@@ -15,101 +15,134 @@ Nova Bank provides personal, medical, education and business loans across the US
 
 ## 🎯 Project objectives
 
-- Identify which groups of borrowers are more likely to default.  
-- Explore loan purposes, grades and terms to find higher-risk products.  
-- Analyze how Loan-to-Income (LTI) and Debt-to-Income (DTI) ratios affect repayment.  
-- Compare borrower profiles by demographics (age band, gender, education, employment, home ownership).  
-- Assess the effect of past defaults and credit history length.  
-- Spot regional differences (USA vs UK vs Canada).  
-- Segment borrowers into **Safe / Moderate / Risky** to support decision making.
+- Evaluate the risk distribution across Nova Bank’s loan portfolio.
+- Identify key drivers of default (demographics, geography, credit history, loan purpose).
+- Provide strategic recommendations for reducing risky exposure.
 
 ---
 
 ## ❓ Key questions explored
 
-- Which types of borrowers are more likely to default?  
+- What proportion of borrowers are risky, moderate, or safe?
+- Which borrower attributes (employment, housing, income, credit history) drive risk?
 - Do certain loan purposes (education, medical, business, personal, debt consolidation) carry more risk?  
-- How do LTI and DTI relate to repayment outcomes?  
 - Does employment type or home ownership affect risk?  
 - How do past defaults or longer credit histories influence outcomes?  
-- Are there clear differences between borrowers in the USA, UK and Canada?  
-- Which loan grades or terms are safer, which are riskier?  
-- Can we group borrowers into “Safe” vs “Risky” clusters?
+- Which geographies are risk hot-spots?  
+- What actionable policies can reduce risky lending without excluding creditworthy borrowers?
 
 ---
 
-## 📊 Dashboard (3 pages)
+## 📊 Dashboard Pages
 
 ### 🔹 Page 1 — **Borrower Risk Profile** (Who looks risky before lending?)  
-- KPI tiles: Average Risk Score, Borrowers Profiled, % with Past Defaults.  
-- Donut: Risk segmentation (Safe / Moderate / Risky).  
-- Heatmap: Employment × Home Ownership vs % Risky.  
-- Bar chart: Past Defaults impact (Y/N).
-  ![Borrower Risk Profile](https://github.com/Mayreeobi/Credit-Risk-Analysis/blob/main/_Risk%20Profile.png)
-
+![Borrower Risk Profile](https://github.com/Mayreeobi/Credit-Risk-Analysis/blob/main/_Risk%20Profile.png)
+*Borrower segmentation by risk score, defaults, employment, and housing.*  
 
 ### 🔹 Page 2 — **Loan Performance** (What happened with current loans?)  
-- KPI tiles: Total Loans Issued, Default Rate, Total Default Exposure.  
-- Bar chart: % Default by Loan Purpose.  
-- Scatter: Loan-to-Income vs Default %.  
-- Map: Default rate across USA, UK, Canada.
-  ![Loan Performance](https://github.com/Mayreeobi/Credit-Risk-Analysis/blob/main/Loan%20Performance.png)
+![Loan Performance](https://github.com/Mayreeobi/Credit-Risk-Analysis/blob/main/Loan%20Performance.png)
+*Analysis of loan balances, defaults, loan purposes, and repayment trends.*  
 
 ### 🔹 Page 3 — **Borrower Details** (Drill-down)  
-- Interactive table of borrower-level details.  
-- Filters for demographics, loan purpose, and grade.
-   ![Borrower Details](https://github.com/Mayreeobi/Credit-Risk-Analysis/blob/main/Details.png)
-
+![Borrower Details](https://github.com/Mayreeobi/Credit-Risk-Analysis/blob/main/Details.png)
+*Granular view by age, status, grade, loan purpose, and loan amount.*  
 
 ---
 
-## 🔎 Key findings & recommendations
+## 🔎 Key Findings  
 
-### Key insights
-- Past defaults and short credit histories (< 5 years) are strong predictors of risk.  
-- Medical and education loans display higher default rates relative to other purposes.  
-- Borrowers with **DTI > 60%** or **LTI > 0.5** are markedly riskier.  
-- Unemployed borrowers and renters show higher default rates than employed homeowners.  
-- Some regional variation exists; the USA shows slightly higher exposure than UK/Canada.  
-- Shorter terms and higher loan grades (A, B) tend to be safer.
+**Portfolio Overview**  
+- Total borrowers: **32.58K** with **$312.43M** in loans issued.  
+- **Default rate**: 21.82% (≈ $77.13M defaulted).  
+- **25.54%** of borrowers classified as risky.  
+- **Average Risk Score**: 3.51.  
+- **17.63%** have past defaults.  
 
-### Recommendations
-1. Tighten lending thresholds for applicants with:  
-   - DTI > 60% or LTI > 0.5  
-   - Credit history < 3 years  
-   - ≥ 2 past delinquencies or prior default on file  
-2. Favor shorter terms and higher grades for riskier product segments.  
-3. Require additional checks or co-signers for medical/education loans.  
-4. Use the **Safe / Moderate / Risky** segmentation to set dynamic approval thresholds.  
-5. Monitor regional policy effects and adjust by market as needed.
+**Risk Distribution**  
+- Safe: **15.28%** | Moderate: **59.18%** | Risky: **25.54%**.  
+- Borrowers with past defaults are **2.3× more likely** to default again (39% vs 17%).  
+
+**Employment & Housing Patterns**  
+- **Unemployed & self-employed** → highest default (22.67% & 22.49%).  
+- **Renters** default more than homeowners.  
+- "Other" housing category = extremely high defaults (33–42%).  
+
+**Demographic Insights**  
+- Age **20–24 yrs** highest risk (28%).  
+- **Singles** more risky (26% riskiness).  
+- **High school graduates** most vulnerable; **PhD/Master’s** safest.  
+
+**Credit History**  
+- Borrowers with **2–5 years** credit history = riskiest group (27.6%).  
+- Past defaults significantly increase future risk.  
+
+**Loan Performance**  
+- Defaulted loans = **24.7% by value**.  
+- Defaults linked to higher interest rates (**13.06% vs 10.44%**) and higher DTI (**42.4%**).  
+- **Medical & education loans** most default-prone.  
+- **Shorter-term, higher-grade loans** (A/B) are safer.  
 
 ---
 
-## 💻 Tools Used
+## ✅ Recommendations  
 
-- **Tableau** — visualization & dashboard (Tableau Public workbook link).  
-- **Excel / CSV** — data prep and sample datasets.  
-- **GitHub** → Project documentation & portfolio
+**1. Strengthen Risk Controls**  
+- Reject/flag applicants with **DTI > 60%, LTI > 0.5, credit history < 3 yrs, or multiple past defaults**.  
+- Require **co-signers** or **collateral** for borderline applicants.  
 
+**2. Optimize Loan Products**  
+- Promote **shorter-term, high-grade loans** (≤ 36 months, Grades A–B).  
+- Apply **stricter vetting** for medical & education loans.  
+- Introduce **tiered interest rates** for debt-consolidation loans.  
 
+**3. Target Borrower Segments**  
+- **Risky**: Small loans, collateral, or deny.  
+- **Moderate**: Monitor closely, adjust rates.  
+- **Safe**: Reward with loyalty incentives.  
 
-## 📂 Repository Structure
-```
-Nova-Bank-Credit-Risk/
-│── data/                 # (Optional: clean dataset, sample provided if allowed)
-│── dashboard/            # Tableau workbook (.twbx)
-│── images/               # Screenshots for README
-│── README.md             # Project documentation
+**4. Employment & Housing Focus**  
+- Additional checks for **unemployed/self-employed renters**.  
+- Incentivize **mortgage/homeowner borrowers** (lower default risk).  
+- Special safeguards for **young borrowers (20–24 yrs)**.  
 
-Nova-Bank-Credit-Risk/
-├─ data/ # raw and cleaned sample data (if allowed)
-├─ dashboard/ # Tableau workbook (.twbx or packaged workbook)
-├─ images/ # screenshots used in README
-├─ insights.md # short findings & charts export
-└─ README.md # this file
-```
-## 📍 Tableau Public / Demo
+**5. Regional Strategy**  
+- Stricter policies in **USA (esp. New York, California)** and **Canada (Ontario, Quebec)**.  
+- Regularly track defaults regionally to guide policy.  
+
+**6. Early Monitoring**  
+- Track past defaulters separately.  
+- Build **early-warning system** for income/job changes.  
+- Launch **financial literacy programs** for high-risk groups.  
+
+---
+
+**Impact**: With these recommendations, Nova Bank can cut defaults, reduce losses, and build **profitable yet inclusive lending policies**.  
+
+---
+
+## 📍 Tableau Public 
 👉 [Tableau Public](https://public.tableau.com/app/profile/chinyere.obi8867/viz/Creditriskanalysis_17575058985000/RiskProfile)
 
+---
 
-⚡ This project simulates the role of a Credit Risk Analyst – helping banks spot risky borrowers, protect against defaults, and still keep lending fair.
+## 🛠️ Skills Demonstrated
+- Data storytelling & dashboard design (Tableau)  
+- Segmentation analysis (Safe / Moderate / Risky)  
+- Business recommendations for financial institutions  
+
+---
+
+## 📂 Deliverables
+- Tableau dashboard (packaged workbook)  
+- Executive summary report (PDF)  
+- GitHub README with findings & recommendations  
+
+---
+
+## 📌 About #dataDNA Challenge
+The **#dataDNA Challenge** by Onyx Data provides real-world datasets for data visualization and storytelling. This project was created as part of the September 2025 challenge on **Credit Risk Analysis**.  
+
+⚡ This project simulates the role of a Credit Risk Analyst, helping banks spot risky borrowers, protect against defaults, and still keep lending fair.
+
+---
+
